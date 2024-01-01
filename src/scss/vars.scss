@@ -1,0 +1,29 @@
+// Container
+$containerWidth: 1440;
+$minContainerPadding: 20;
+$maxContainerPadding: 100;
+
+// Breakpoints
+$breakpoint1450: 1449.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint576: 575.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$backgraundColor: #2e2c38;
+$containerColor: #393646;
+$primary: #d5d1e4;
+$secondary: #ff6000;
+
+// Fonts
+$fontMain: 'JetBrains Mono';
+
+// Functions
+@use 'sass:math';
+
+@function rem($px) {
+	$remSize: math.div($px, 16) + rem;
+	@return $remSize;
+}

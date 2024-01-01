@@ -1,0 +1,12 @@
+@mixin adaptiveValue($property, $min, $max, $minWidth: 480, $maxWidth: 780) {
+	$value: calc(
+		($min * 1px) + ($max - $min) * ((100vw - #{$minWidth}px) / #{$maxWidth})
+	);
+	@media (max-width: #{$minWidth}px) {
+		#{$property}: #{$min}px;
+	}
+	@media (min-width: #{$minWidth+$maxWidth}px) {
+		#{$property}: #{$max}px;
+	}
+	#{$property}: $value;
+}
